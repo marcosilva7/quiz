@@ -127,3 +127,7 @@
     width: 100%;
     padding: 12px;
   }
+
+  .allCorrects {
+    background-color: #04ff3a !important;
+  }

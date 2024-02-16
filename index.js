@@ -105,6 +105,8 @@ const questions = [
       dt.querySelector('span').textContent = answer;
       dt.querySelector('input').setAttribute('name', 'answer-' + questions.indexOf(item));
       dt.querySelector('input').value = item.answer.indexOf(answer);
+      // Entering the ID
+      dt.querySelector('input').setAttribute('id', 'disableInput');
   
       dt.querySelector('input').onchange = (event) => {
         correctsAnswer(event, item);
@@ -126,9 +128,13 @@ const questions = [
       corrects.add(item);
     }
 
-    // Validation of total correct questions or not 
+    // Validation of total correct questions or not and disabled inputs
     if(questions.length == corrects.size){
       totalCorrectsAnswer();
+      disableInput();
+      document.querySelector('#h1-text').setAttribute('class', 'allCorrects');
+      document.querySelector('#corrects').setAttribute('class', 'allCorrects');
+
     }else{
       answerCounter();
     }
@@ -146,4 +152,12 @@ const questions = [
   function totalCorrectsAnswer(){
     const corrects = document.querySelector("#corrects span");
     corrects.innerHTML = "<strong>Congratulations! That's awesome!</strong>";
+  }
+
+  // The function don't allow you to mark the inputs after mark all the answers correct
+  function disableInput(){
+    var disableInputs = document.querySelectorAll('#disableInput');
+    disableInputs.forEach(function(input) {
+      input.disabled = true;
+    });
   }
