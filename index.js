@@ -108,7 +108,6 @@ const questions = [
   
       dt.querySelector('input').onchange = (event) => {
         correctsAnswer(event, item);
-        answerCounter();
       }
   
       quizItem.querySelector('dl').appendChild(dt);
@@ -122,16 +121,29 @@ const questions = [
   // The function validates if the selected question is correct
   function correctsAnswer(event, item){
     corrects.delete(item);
+    
     if(event.target.value == item.correct){
-      //alert('true');
       corrects.add(item);
     }
-    //alert(corrects.size);
+
+    // Validation of total correct questions or not 
+    if(questions.length == corrects.size){
+      totalCorrectsAnswer();
+    }else{
+      answerCounter();
+    }
   }
   
   // the function keeps the adjustments in the footer updated 
   function answerCounter(){
     const totalQuestions = questions.length; 
     const showTotal = document.querySelector('#corrects span');
-    showTotal.textContent = corrects.size + ' de ' + totalQuestions;
+
+    showTotal.innerHTML = "<strong>Correct questions</strong> " + corrects.size + ' de ' + totalQuestions;
+  }
+
+  // The function updates the message when the student gets all the questions correct
+  function totalCorrectsAnswer(){
+    const corrects = document.querySelector("#corrects span");
+    corrects.innerHTML = "<strong>Congratulations! That's awesome!</strong>";
   }
