@@ -31,6 +31,10 @@
   
   }
   
+  main {
+    margin-bottom: 89px;
+  }
+
   .quiz-item {
     max-width: 540px;
     margin: 0 auto 24px;
