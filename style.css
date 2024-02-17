@@ -16,32 +16,31 @@
   }
   
   header {
-    margin-bottom: 24px;
+    margin: 52px 0 25px;
+    border-bottom: 1px solid #475569;
   }
   
-  header #h1-text{
-    text-align: center;
-    background-color: #5898ff;
-    color: #120b18;
-    width: 100%;
+  #h1-text {
+    font-size: 45px;
+    color: #c5c5c5;
+    margin-bottom: 8px;
   }
   
   #quiz {
     counter-reset: quiz-item;
-  
   }
   
   main {
     margin-bottom: 89px;
+    max-width: 540px;
+    margin: 0 auto 89px;
   }
 
   .quiz-item {
-    max-width: 540px;
-    margin: 0 auto 24px;
-  
     border: 1px solid #475569;
     border-radius: 5px;
-  
+    margin-bottom: 15px; 
+    
     overflow: hidden;
   }
   

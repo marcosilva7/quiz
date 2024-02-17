@@ -132,7 +132,6 @@ const questions = [
     if(questions.length == corrects.size){
       totalCorrectsAnswer();
       disableInput();
-      document.querySelector('#h1-text').setAttribute('class', 'allCorrects');
       document.querySelector('#corrects').setAttribute('class', 'allCorrects');
 
     }else{
