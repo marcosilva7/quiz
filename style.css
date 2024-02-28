@@ -40,7 +40,7 @@
     border: 1px solid #475569;
     border-radius: 5px;
     margin-bottom: 15px; 
-    
+
     overflow: hidden;
   }
   
@@ -129,4 +129,90 @@
 
   .allCorrects {
     background-color: #04ff3a !important;
+  }
+
+  @media (min-width: 300px) {
+    main {
+      max-width: 220px;
+    }
+    #h1-text {
+      font-size: 27px;
+    }
+    .quiz-item dl {
+      padding: 10px;
+    }
+    .quiz-item h3 {
+      font-size: 12px;
+    }
+    span {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 370px) {
+    main {
+      max-width: 300px;
+    }
+    #h1-text {
+      font-size: 32px;
+    }
+    .quiz-item dl {
+      padding: 12px;
+    }
+    .quiz-item h3 {
+      font-size: 13px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 440px) {
+    main {
+      max-width: 370px;
+    }
+    #h1-text {
+      font-size: 38px;
+    }
+    .quiz-item dl {
+      padding: 18px 20px;
+    }
+    .quiz-item h3 {
+      font-size: 14px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 530px) {
+    main {
+      max-width: 470px;
+    }
+    #h1-text {
+      font-size: 38px;
+    }
+    .quiz-item dl {
+      padding: 18px 20px;
+    }
+    .quiz-item h3 {
+      font-size: 15px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 600px) {
+    main {
+      max-width: 540px;
+    }
+    #h1-text {
+      font-size: 45px;
+    }
+    .quiz-item dl {
+      padding: 20px 24px;
+    }
+    .quiz-item h3 {
+      font-size: 15px;
+    }
+    span {
+      font-size: 14px;
+    }
   }

@@ -114,7 +114,6 @@ const questions = [
   
       quizItem.querySelector('dl').appendChild(dt);
     }
-  
     quizItem.querySelector('dl dt').remove();
   
     quiz.appendChild(quizItem);
